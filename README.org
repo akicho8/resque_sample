@@ -1,0 +1,8 @@
+* Resqueの実験用アプリ
+
+** セットアップ
+1. rails s
+2. VERBOSE=1 INTERVAL=1 QUEUE=* rake environment resque:work
+3. VERBOSE=1 DYNAMIC_SCHEDULE=1 rake environment resque:scheduler
+4. resque-web -F config/initializers/resque.rb
+5. open http://localhost:3000/

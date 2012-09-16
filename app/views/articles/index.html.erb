@@ -1,0 +1,12 @@
+<%= link_to("RELOAD", polymorphic_path(:articles)) %><%= tag(:br) %>
+
+<%= link_to("Resque.enqueue(ArticleWorker)", polymorphic_path(:articles, :enqueue => true)) %><%= tag(:br) %>
+<%= link_to("Resque.enqueue_in(5.seconds, ArticleWorker)", polymorphic_path(:articles, :enqueue_in => true)) %><%= tag(:br) %>
+
+<%= link_to("wresque_wrapperを使ってクラスメソッド実行", polymorphic_path(:articles, :wresque_wrapper => true, :class => true)) %><%= tag(:br) %>
+<%= link_to("wresque_wrapperを使ってインスタンス実行", polymorphic_path(:articles, :wresque_wrapper => true, :instance => true)) %><%= tag(:br) %>
+
+<%= link_to("clear_schedule", polymorphic_path(:articles, :clear_schedule => true)) %><%= tag(:br) %>
+
+<%= debug Resque.info %>
+<%= debug @results %>

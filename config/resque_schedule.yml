@@ -1,0 +1,8 @@
+# cron
+#   5 param: 分 時 日 月 曜日
+#   6 param: 秒 分 時 日 月 曜日
+ArticleWorker:
+  cron: "* * * * *"
+  queue: "resque_schedule_yml"
+  args: "(args)"
+  description: "(description)"
