@@ -24,7 +24,8 @@ class ArticlesController < ApplicationController
     end
 
     if params[:clear_schedule]
-      @results = Resque::Scheduler.clear_schedule!
+      @results << Resque::Scheduler.clear_schedule!
+    end
     end
   end
 end

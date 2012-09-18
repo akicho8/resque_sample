@@ -37,7 +37,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'resque'
-gem "resque-delay"
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem "wresque_wrapper"
 gem "resque-top"
