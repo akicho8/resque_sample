@@ -8,5 +8,7 @@
 
 <%= link_to("clear_schedule", polymorphic_path(:articles, :clear_schedule => true)) %><%= tag(:br) %>
 
+<%= link_to("メール送信", polymorphic_path(:articles, :resque_mailer => true)) %><%= tag(:br) %>
+
 <%= debug Resque.info %>
 <%= debug @results %>

@@ -26,6 +26,9 @@ class ArticlesController < ApplicationController
     if params[:clear_schedule]
       @results << Resque::Scheduler.clear_schedule!
     end
+
+    if params[:resque_mailer]
+      @results << Mailman.developper_notice.deliver!
     end
   end
 end

@@ -40,6 +40,7 @@ gem 'resque'
 gem 'resque-scheduler', :require => 'resque_scheduler'
 gem "wresque_wrapper"
 gem "resque-top"
+gem "resque_mailer"
 
 # gem "resque-async-method"
 # gem "resque-async_deliver"
