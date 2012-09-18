@@ -139,7 +139,6 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.2.8)
   resque
-  resque-delay
   resque-scheduler
   resque-top
   sass-rails (~> 3.2.3)
